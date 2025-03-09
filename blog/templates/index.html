@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Home - Ayanokoji's Blog{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center text-light">📝 Recent Posts</h2>
+
+    {% for post in posts %}
+    <div class="futuristic-card mt-4">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        {% if post.image_file %}
+            <img src="{{ url_for('static', filename= 'post_pics/' + post.image_file) }}" alt="Post Image width"="150">
+        {% endif %}
+        <p class="text-muted">By <strong>{{ post.author.username }}</strong> | {{ post.date_posted.strftime('%B %d, %Y') }}</p>
+        <a href="#" class="btn btn-neon">Read More</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

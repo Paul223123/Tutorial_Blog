@@ -1,0 +1,24 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.futuristic-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.btn-neon {
+    background-color: #00ffcc;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-neon:hover {
+    background-color: #00cc99;
+}
